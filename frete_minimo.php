@@ -32,6 +32,8 @@ foreach ($data as $tabela => $tabela_valor) {
   }
 }
 
+// echo $tabelas->$tabela;
+// exit;
 if (count($result) < 2) {
   $result = $result[0];
 }
@@ -40,4 +42,4 @@ if (isset($_GET["dist"])) {
   $frete = $result["CCD"] * $dist + $result["CC"];
   $result = ["frete_minimo" => $frete];
 }
-echo json_encode($result, JSON_UNESCAPED_UNICODE);
+echo json_encode($result, JSON_UNESCAPED_UNICODE | JSON_NUMERIC_CHECK);
