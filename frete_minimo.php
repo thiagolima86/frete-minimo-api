@@ -14,17 +14,29 @@ $result = [];
 
 if (isset($_GET["tabela"])) {
   $tabela = strtoupper($_GET["tabela"]);
+  if (!$tabelas->$tabela) {
+    echo "{'error': 'tabela $tabela, não existe'}";
+    exit;
+  }
   $data = [$tabela => $data->$tabela];
 }
 foreach ($data as $tabela => $tabela_valor) {
   if (isset($_GET["tipo_carga"])) {
     $tipo = $_GET["tipo_carga"];
+    if (!$tipo_cargas->$tipo) {
+      echo "{'error': 'tipo $tipo, não existe'}";
+      exit;
+    }
     $tabela_valor = [$tipo => $tabela_valor->$tipo];
   }
   foreach ($tabela_valor as $tipo => $tipo_valor) {
     if (isset($_GET["eixo"])) {
-      $tipo = $_GET["eixo"];
-      $tipo_valor = [$tipo => $tipo_valor->$tipo];
+      $eixo = $_GET["eixo"];
+      if (!$tipo_valor->$eixo) {
+        echo "{'error': 'eixo $eixo, não existe'}";
+        exit;
+      }
+      $tipo_valor = [$eixo => $tipo_valor->$eixo];
     }
     foreach ($tipo_valor as $eixo => $eixo_valor) {
       $result[] = ["CCD" => $eixo_valor->CCD, "CC" => $eixo_valor->CC, "eixos" => $eixo, "tipo_carga"=> ["cod" => $tipo, "descricao" => $tipo_cargas->$tipo], "tabela" => ["nome"=> $tabela, "descricao"=> $tabelas->$tabela]];
@@ -32,8 +44,7 @@ foreach ($data as $tabela => $tabela_valor) {
   }
 }
 
-// echo $tabelas->$tabela;
-// exit;
+
 if (count($result) < 2) {
   $result = $result[0];
 }
