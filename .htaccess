@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteRule ^tabelas/?$ /tabelas.php [NC,L]
+RewriteRule ^tabelas/(.*)/?$ /tabelas.php?id=$1 [NC,L]
+RewriteRule ^tipo_cargas/?$ /tipo_cargas.php [NC,L]
+RewriteRule ^tipo_cargas/(.*)/?$ /tipo_cargas.php?id=$1 [NC,L]
+RewriteRule ^frete/tabela/(.*)/tipo_carga/(.*)/eixo/(.*)/dist/(.*)/?$ /frete_minimo.php?tabela=$1&tipo_carga=$2&eixo=$3&dist=$4 [NC,L]
+RewriteRule ^frete/tabela/(.*)/tipo_carga/(.*)/eixo/(.*)/?$ /frete_minimo.php?tabela=$1&tipo_carga=$2&eixo=$3 [NC,L]
+RewriteRule ^frete/tabela/(.*)/tipo_carga/(.*)/?$ /frete_minimo.php?tabela=$1&tipo_carga=$2 [NC,L]
+RewriteRule ^frete/tabela/(.*)/?$ /frete_minimo.php?tabela=$1 [NC,L]
+RewriteRule ^frete/?$ /frete_minimo.php [NC,L]
+
