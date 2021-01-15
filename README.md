@@ -4,13 +4,13 @@ Ultimas atualização 14/janeiro/2021
 
 [Link do diário oficial](https://www.in.gov.br/en/web/dou/-/portaria-n-399-de-3-de-novembro-de-2020-286403617?utm_campaign=circular_n_545_-_antt_atualiza_tabela_do_piso_minimo_de_frete&utm_medium=email&utm_source=RD+Station)
 
-URL BASE: http://api-frete-mnimo.unisystems.com.br/frete-minimo
+URL BASE: http://api-frete-minimo.unisystems.com.br/frete-minimo
 
 ## Lista de tabelas
 
 * Listar todas:  `/tabelas`
 * Listar uma:  `/tabelas/A`
-* Exemplo: http://api-frete-mnimo.unisystems.com.br/frete-minimo/tabelas/B
+* Exemplo: http://api-frete-minimo.unisystems.com.br/frete-minimo/tabelas/B
 
 
 ## Lista de Tipos de carga
