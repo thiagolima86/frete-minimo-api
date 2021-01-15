@@ -1,5 +1,5 @@
 <?php
-ini_set('precision', 4);
+ini_set('precision', 5);
 ini_set('serialize_precision', -1);
 
 header('Content-Type: application/json; charset=UTF-8');
