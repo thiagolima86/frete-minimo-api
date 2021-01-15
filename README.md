@@ -20,10 +20,10 @@ URL BASE: http://api-frete-minimo.unisystems.com.br
 
 ## Lista de valores para calculo de frete mínimo
 
-* Listar todos:  `/frete`
-* filtrar por tabela:  `/tipo_cargas/tabela/A`
-* filtrar por tabela e tipo de carga:  `/tipo_cargas/tabela/A/tipo_carga/1`
-* filtrar por tabela, tipo de carga e eixo:  `/tipo_cargas/tabela/A/tipo_carga/1/eixo/2`
-* calcular frete minimo:  `/tipo_cargas/tabela/A/tipo_carga/1/eixo/2/dist/150`
+* Listar todos:  `/fretes`
+* filtrar por tabela:  `/tabela/A`
+* filtrar por tabela e tipo de carga:  `/tabela/A/tipo_carga/1`
+* filtrar por tabela, tipo de carga e eixo:  `/tabela/A/tipo_carga/1/eixo/2`
+* calcular frete minimo:  `/tabela/A/tipo_carga/1/eixo/2/dist/150`
 
 observação o valor da distancia [dist] é dado em (km).
